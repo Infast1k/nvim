@@ -16,11 +16,9 @@ keymap.set('n', '<C-h>', '<C-w>h', { desc = 'Go to left split' })
 keymap.set('n', '<C-j>', '<C-w>j', { desc = 'Go to bottom split' })
 keymap.set('n', '<C-k>', '<C-w>k', { desc = 'Go to top split' })
 
-keymap.set('n', '<leader>bo', '<cmd>tabnew<CR>', { desc = 'Open new tab' })
+keymap.set('n', '<leader>bn', '<cmd>tabnew<CR>', { desc = 'Open new tab' })
 keymap.set('n', '<leader>bx', '<cmd>tabclose<CR>', { desc = 'Close current tab' })
-keymap.set('n', '<leader>bn', '<cmd>tabn<CR>', { desc = 'Go to next tab' })
-keymap.set('n', '<leader>bp', '<cmd>tabp<CR>', { desc = 'Go to previous tab' })
-keymap.set('n', '<leader>bf', '<cmd>tabnew %<CR>', { desc = 'Open current buffer in new tab' })
+keymap.set('n', '<leader>bc', '<cmd>tabnew %<CR>', { desc = 'Open current buffer in new tab' })
 
 keymap.set('n', 'j', 'gj')
 keymap.set('n', 'k', 'gk')
