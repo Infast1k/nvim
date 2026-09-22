@@ -7,10 +7,12 @@ return {
     "nvim-tree/nvim-web-devicons",
     "folke/todo-comments.nvim",
     "benfowler/telescope-luasnip.nvim",
+    "folke/trouble.nvim",
   },
   config = function()
     local telescope = require("telescope")
     local actions = require("telescope.actions")
+    local trouble_telescope = require("trouble.sources.telescope")
 
     telescope.setup({
       pickers = {
@@ -35,6 +37,7 @@ return {
           i = {
             ["<C-k>"] = actions.move_selection_previous,
             ["<C-j>"] = actions.move_selection_next,
+            ["<C-t>"] = trouble_telescope.open,
           },
         },
       },
