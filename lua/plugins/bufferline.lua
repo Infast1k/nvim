@@ -1,7 +1,7 @@
 return {
   "akinsho/bufferline.nvim",
-    event = "VeryLazy",
-    keys = {
+  event = "VeryLazy",
+  keys = {
     { "<Tab>", "<Cmd>BufferLineCycleNext<CR>", desc = "Next tab" },
     { "<BS>", "<Cmd>BufferLineCyclePrev<CR>", desc = "Prev tab" },
   },
@@ -17,11 +17,10 @@ return {
       auto_toggle_bufferline = true,
     },
     highlights = {
-      -- Стиль для активной вкладки
       buffer_selected = {
-        fg = "#FFFFFF", -- Яркий цвет текста (например, синий)
-        bg = "#e0a857",    -- Прозрачный фон
-        bold = true,    -- Жирный шрифт для акцента
+        fg = "#FFFFFF",
+        bg = "#e0a857",
+        bold = true,
       },
     },
   },

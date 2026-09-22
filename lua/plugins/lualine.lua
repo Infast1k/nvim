@@ -1,13 +1,13 @@
 return {
-  'nvim-lualine/lualine.nvim',
-  dependencies = { 'nvim-tree/nvim-web-devicons' },
+  "nvim-lualine/lualine.nvim",
+  dependencies = { "nvim-tree/nvim-web-devicons" },
   config = function()
-    require('lualine').setup {
+    require("lualine").setup({
       options = {
         icons_enabled = true,
-        theme = 'auto',
-        component_separators = { left = '', right = ''},
-        section_separators = { left = '', right = ''},
+        theme = "auto",
+        component_separators = { left = "", right = "" },
+        section_separators = { left = "", right = "" },
         disabled_filetypes = {
           statusline = {},
           winbar = {},
@@ -22,51 +22,51 @@ return {
           winbar = 1000,
           refresh_time = 16, -- ~60fps
           events = {
-            'WinEnter',
-            'BufEnter',
-            'BufWritePost',
-            'SessionLoadPost',
-            'FileChangedShellPost',
-            'VimResized',
-            'Filetype',
-            'CursorMoved',
-            'CursorMovedI',
-            'ModeChanged',
+            "WinEnter",
+            "BufEnter",
+            "BufWritePost",
+            "SessionLoadPost",
+            "FileChangedShellPost",
+            "VimResized",
+            "Filetype",
+            "CursorMoved",
+            "CursorMovedI",
+            "ModeChanged",
           },
-        }
+        },
       },
       sections = {
-        lualine_a = {'mode'},
-        lualine_b = {'branch', 'diff', 'diagnostics'},
+        lualine_a = { "mode" },
+        lualine_b = { "branch", "diff", "diagnostics" },
         lualine_c = {
-	  {
-	    'filename',
-	    path = 1,
-	    on_click = function(_, button, _)
-	      if button == 'l' then
-	        local path = vim.fn.expand('%:.')
-		vim.fn.setreg('+', path)
-		vim.notify('Скопировано: ' .. path, vim.log.levels.INFO)
-	      end
-	    end,
+          {
+            "filename",
+            path = 1,
+            on_click = function(_, button, _)
+              if button == "l" then
+                local path = vim.fn.expand("%:.")
+                vim.fn.setreg("+", path)
+                vim.notify("Скопировано: " .. path, vim.log.levels.INFO)
+              end
+            end,
           },
         },
         lualine_x = {},
-        lualine_y = {'progress'},
-        lualine_z = {'location'}
+        lualine_y = { "progress" },
+        lualine_z = { "location" },
       },
       inactive_sections = {
         lualine_a = {},
         lualine_b = {},
-        lualine_c = {'filename'},
-        lualine_x = {'location'},
+        lualine_c = { "filename" },
+        lualine_x = { "location" },
         lualine_y = {},
-        lualine_z = {}
+        lualine_z = {},
       },
       tabline = {},
       winbar = {},
       inactive_winbar = {},
-      extensions = {}
-    }
+      extensions = {},
+    })
   end,
 }

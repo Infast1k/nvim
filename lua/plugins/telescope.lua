@@ -17,19 +17,20 @@ return {
     telescope.setup({
       pickers = {
         find_files = {
-	      find_command = {
-	        "rg", "--files",
-	        "--hidden",
-	        "--glob=!**/.git/*",
-	        "--glob=!**/.idea/*",
-	      },
+          find_command = {
+            "rg",
+            "--files",
+            "--hidden",
+            "--glob=!**/.git/*",
+            "--glob=!**/.idea/*",
+          },
         },
-	    live_grep = {
-	      additional_args = {
-	        "--hidden",
-	        "--no-ignore",
-	      },
-	    },
+        live_grep = {
+          additional_args = {
+            "--hidden",
+            "--no-ignore",
+          },
+        },
       },
       defaults = {
         path_display = { "smart" },
