@@ -23,3 +23,5 @@ require("lazy").setup({
     notify = false,
   },
 })
+
+require('plugins_ext.lsp')
